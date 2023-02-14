@@ -1,0 +1,19 @@
+{
+  "messages": {
+    "locales": {
+      "english": "English",
+      "ukrainian": "Українська"
+    },
+    "loading": {
+      "appLoadingText": "Завантаження..."
+    },
+    "intro": {
+      "startGame": "Почати гру",
+      "wallOfGlory": "Стіна слави"
+    },
+    "wallOfGlory": {
+      "title": "Стіна слави",
+      "returnBack": "Повернутися"
+    }
+  }
+}

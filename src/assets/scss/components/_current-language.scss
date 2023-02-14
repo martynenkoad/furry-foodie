@@ -1,0 +1,23 @@
+.current-language {
+  font-size: 31px;
+
+  span {
+    display: inline-block;
+  }
+}
+
+.current-language span,
+.select-language .locale button {
+  padding-left: 43px;
+  background-position: left center;
+  background-size: 30px auto;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.2));
+
+  &.en {
+    background-image: url('~@/assets/images/flags/en.png');
+  }
+  &.ua {
+    background-image: url('~@/assets/images/flags/ua.png');
+  }
+}

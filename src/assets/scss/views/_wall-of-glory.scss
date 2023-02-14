@@ -1,0 +1,75 @@
+.wall-of-glory {
+  padding-bottom: 10px;
+
+  .winners-list {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      background: url('~@/assets/images/paw.svg') no-repeat left center;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-left: 44px;
+
+      span {
+        display: inline-block;
+        font-size: 36px;
+      }
+
+      .number {
+        width: 30px;
+        color: #571684;
+      }
+      .name {
+        color: #1D0032;
+        &.na {
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+}
+
+.return-back-button {
+  margin-top: 30px;
+  button {
+    font-size: 24px;
+    background: #7023A5;
+    border: 2px solid #fff;
+    padding: 8px;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 150px;
+    padding-right: 30px;
+    outline: none;
+    user-select: none;
+    color: #fff;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: -40px;
+      width: 163px;
+      height: 92px;
+      content: "";
+      display: inline-block;
+      background: url('~@/assets/images/back-dog.svg') no-repeat center center;
+      transition: transform 0.2s linear;
+    }
+
+    &:active {
+      &:before {
+        transform: translateX(-10px);
+      }
+    }
+  }
+}

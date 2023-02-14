@@ -1,0 +1,36 @@
+.app-background {
+  background-position: bottom center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url('~@/assets/images/background.png');
+  transition: background-position 500ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+  &.background-none {
+    background-position: bottom -250px center;
+  }
+
+  &.background-half {
+    background-position: bottom -150px center;
+  }
+
+  &.background-swing {
+    animation: background-swing 5s linear infinite;
+  }
+
+  @keyframes background-swing {
+    0% {
+      background-position: bottom -130px center;
+    }
+    50% {
+      background-position: bottom -100px center;
+    }
+    100% {
+      background-position: bottom -130px center;
+    }
+  }
+
+  &.background-full {
+    background-position: bottom 0 center;
+  }
+}

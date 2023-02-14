@@ -1,0 +1,417 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 400;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  overflow: visible;
+  font: inherit;
+  line-height: normal;
+  text-align: left;
+  background: none;
+  border: 0;
+}
+
+@font-face {
+  font-family: "SignPainter";
+  src: url("~@/assets/fonts/SignPainter-HouseScript.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Sigmar One";
+  src: url("~@/assets/fonts/SigmarOne-Regular.woff2") format("woff2"), url("~@/assets/fonts/SigmarOne-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+html, body, #app, .app-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "SignPainter", sans-serif;
+  color: #fff;
+  background: #8425CB;
+  font-size: 48px;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.title {
+  font-family: "Sigmar One", sans-serif;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+}
+
+.app-wrapper {
+  position: relative;
+}
+
+.app-loading {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  line-height: 150%;
+  background: linear-gradient(to right, #FFF 20%, #E0ABFE 40%, #E0ABFE 60%, #FFF 80%);
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 1s linear infinite;
+          animation: shine 1s linear infinite;
+}
+@-webkit-keyframes shine {
+  to {
+    background-position: -200% center;
+  }
+}
+@keyframes shine {
+  to {
+    background-position: -200% center;
+  }
+}
+
+.app-logo {
+  position: absolute;
+  left: 50%;
+  transition: top 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.app-logo .icon, .app-logo .furry, .app-logo .foodie {
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  transition: left 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), top 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.app-logo .icon {
+  background-image: url("~@/assets/images/logo/icon.svg");
+}
+.app-logo .foodie {
+  background-image: url("~@/assets/images/logo/foodie.svg");
+}
+.app-logo.screen-middle {
+  top: 15vh;
+}
+.app-logo.screen-top {
+  top: 3vh;
+}
+.app-logo.screen-top .icon {
+  -webkit-animation: shake 10s linear infinite;
+          animation: shake 10s linear infinite;
+}
+@-webkit-keyframes shake {
+  0%, 80% {
+    transform: rotate(0);
+  }
+  94% {
+    transform: rotate(-10deg);
+  }
+  97% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes shake {
+  0%, 80% {
+    transform: rotate(0);
+  }
+  94% {
+    transform: rotate(-10deg);
+  }
+  97% {
+    transform: rotate(10deg);
+  }
+}
+.app-logo.small-logo {
+  top: 2vh;
+}
+.app-logo.screen-top, .app-logo.screen-middle {
+  width: 310px;
+  height: 210px;
+  margin-left: -155px;
+}
+.app-logo.screen-top .icon, .app-logo.screen-middle .icon {
+  width: 96px;
+  height: 91px;
+  left: 38px;
+  top: 0;
+}
+.app-logo.screen-top .furry, .app-logo.screen-middle .furry {
+  width: 100%;
+  height: 60px;
+  top: 98px;
+}
+.app-logo.screen-top .foodie, .app-logo.screen-middle .foodie {
+  width: 100%;
+  height: 34px;
+  top: 170px;
+}
+.app-logo.small-logo {
+  width: 360px;
+  height: 80px;
+  margin-left: -180px;
+}
+.app-logo.small-logo .icon {
+  left: 10px;
+  top: 0;
+  width: 60px;
+  height: 64px;
+}
+.app-logo.small-logo .furry {
+  left: 80px;
+  top: 0;
+  width: 170px;
+  height: 64px;
+}
+.app-logo.small-logo .foodie {
+  left: 255px;
+  top: 0;
+  width: 96px;
+  height: 64px;
+}
+
+.app-background {
+  background-position: bottom center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url("~@/assets/images/background.png");
+  transition: background-position 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.app-background.background-none {
+  background-position: bottom -250px center;
+}
+.app-background.background-half {
+  background-position: bottom -150px center;
+}
+.app-background.background-swing {
+  -webkit-animation: background-swing 5s linear infinite;
+          animation: background-swing 5s linear infinite;
+}
+@-webkit-keyframes background-swing {
+  0% {
+    background-position: bottom -130px center;
+  }
+  50% {
+    background-position: bottom -100px center;
+  }
+  100% {
+    background-position: bottom -130px center;
+  }
+}
+@keyframes background-swing {
+  0% {
+    background-position: bottom -130px center;
+  }
+  50% {
+    background-position: bottom -100px center;
+  }
+  100% {
+    background-position: bottom -130px center;
+  }
+}
+.app-background.background-full {
+  background-position: bottom 0 center;
+}
+
+.primary-button {
+  display: inline-block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.primary-button button {
+  outline: none;
+  border: 5px solid #fff;
+  border-radius: 100px;
+  background: #7023A5;
+  color: #fff;
+  line-height: 100%;
+  padding: 13px 40px;
+  width: 100%;
+  font-size: 42px;
+  transition: transform 0.2s linear, background-color 0.2s linear;
+}
+.primary-button button:active {
+  transform: scale(0.8, 0.8);
+  background: #601395;
+}
+
+.current-language {
+  font-size: 31px;
+}
+.current-language span {
+  display: inline-block;
+}
+
+.current-language span,
+.select-language .locale button {
+  padding-left: 43px;
+  background-position: left center;
+  background-size: 30px auto;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.2));
+}
+.current-language span.en,
+.select-language .locale button.en {
+  background-image: url("~@/assets/images/flags/en.png");
+}
+.current-language span.ua,
+.select-language .locale button.ua {
+  background-image: url("~@/assets/images/flags/ua.png");
+}
+
+.primary-input input {
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  border-bottom: 3px solid #fff;
+  width: 99%;
+}
+
+.view {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.view .view-title {
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.intro-view.view {
+  display: block;
+  max-width: 75%;
+  margin: auto;
+  padding-top: 37vh;
+}
+.intro-view .row + .row {
+  padding-top: 25px;
+}
+.intro-view .row .primary-button, .intro-view .row .primary-button button {
+  width: 100%;
+  text-align: center;
+}
+.intro-view .row.language {
+  padding-top: 50px;
+}
+
+.select-language .locale {
+  text-align: center;
+}
+.select-language .locale button {
+  display: inline-block;
+  font-size: 31px;
+  outline: none;
+  border: none;
+  color: #fff;
+  margin-bottom: 33px;
+  margin-top: 33px;
+}
+
+.wall-of-glory {
+  padding-bottom: 10px;
+}
+.wall-of-glory .winners-list {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.wall-of-glory .winners-list ul, .wall-of-glory .winners-list li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wall-of-glory .winners-list li {
+  background: url("~@/assets/images/paw.svg") no-repeat left center;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 44px;
+}
+.wall-of-glory .winners-list li span {
+  display: inline-block;
+  font-size: 36px;
+}
+.wall-of-glory .winners-list li .number {
+  width: 30px;
+  color: #571684;
+}
+.wall-of-glory .winners-list li .name {
+  color: #1D0032;
+}
+.wall-of-glory .winners-list li .name.na {
+  opacity: 0.2;
+}
+
+.return-back-button {
+  margin-top: 30px;
+}
+.return-back-button button {
+  font-size: 24px;
+  background: #7023A5;
+  border: 2px solid #fff;
+  padding: 8px;
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 150px;
+  padding-right: 30px;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #fff;
+}
+.return-back-button button:before {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 163px;
+  height: 92px;
+  content: "";
+  display: inline-block;
+  background: url("~@/assets/images/back-dog.svg") no-repeat center center;
+  transition: transform 0.2s linear;
+}
+.return-back-button button:active:before {
+  transform: translateX(-10px);
+}/*# sourceMappingURL=index.css.map */

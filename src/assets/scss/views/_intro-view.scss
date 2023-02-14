@@ -1,0 +1,23 @@
+.intro-view {
+  &.view {
+    display: block;
+    max-width: 75%;
+    margin: auto;
+    padding-top: 37vh;
+  }
+
+  .row + .row {
+    padding-top: 25px;
+  }
+  .row {
+    .primary-button {
+      &, button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  .row.language {
+    padding-top: 50px;
+  }
+}

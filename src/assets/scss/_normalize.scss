@@ -1,0 +1,75 @@
+@mixin normalize-layout() {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@mixin normalize-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin normalize-table() {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@mixin normalize-input() {
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+@mixin normalize-quote() {
+  quotes: none;
+
+  &::before,
+  &::after {
+    content: "";
+    content: none;
+  }
+}
+
+@mixin normalize-title() {
+  margin: 0;
+  font-weight: 400;
+}
+
+@mixin normalize-link() {
+  text-decoration: none;
+}
+
+@mixin normalize-font() {
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+@mixin normalize-button() {
+  padding: 0;
+  overflow: visible;
+  font: inherit;
+  line-height: normal;
+  text-align: left;
+  background: none;
+  border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include normalize-title();
+}
+
+ul {
+  @include normalize-list();
+}
+
+a {
+  @include normalize-link();
+}
+
+button {
+  @include normalize-button();
+}

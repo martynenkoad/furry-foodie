@@ -1,0 +1,19 @@
+{
+  "messages": {
+    "locales": {
+      "english": "English",
+      "ukrainian": "Українська"
+    },
+    "loading": {
+      "appLoadingText": "Loading..."
+    },
+    "intro": {
+      "startGame": "Start Game",
+      "wallOfGlory": "Wall of Glory"
+    },
+    "wallOfGlory": {
+      "title": "Wall of Glory",
+      "returnBack": "Return Back"
+    }
+  }
+}
